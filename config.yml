@@ -1,0 +1,13 @@
+---
+# Upgraded from v2
+crp_config:
+  solvable:
+    mem_limit_mb: 300
+  tfw:
+    mem_limit_mb: 300
+    ports:
+    - 5555/controller
+    - 8888/http
+crp_type: docker
+enable_flag_input: false
+version: v3.1
