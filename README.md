@@ -138,7 +138,7 @@ def on_terminal_command(current_state: int, executed_command: str):
 
 if __name__ == '__main__':
     print('🎉 SDK STARTED 🎉')
-    sdk._start()
+    sdk.start()
 ```
 
 You can install the SDK to your local environment as well (and I really suggest checking out its source code) - this way IntelliSense can help you with the function names when developing exercises:
