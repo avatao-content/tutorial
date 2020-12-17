@@ -23,7 +23,7 @@ terminal:
   terminalMenuItem: terminal # terminal / console
 ide:
   patterns: 
-   - /home/user/tutorial/app.*
+   - /.tutorial/app.*
   showDeployButton: true
   deployButtonText:
     TODEPLOY:  Deploy
