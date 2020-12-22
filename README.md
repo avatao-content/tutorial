@@ -21,7 +21,7 @@ Then you can access it on `https://localhost:8888`.
 
 ### How it works? ###
 
-This is just an additional abstraction layer, which (hopefully) makes it easier to create tutorials, but it's still using our same old [Tutorial Framework](https://github.com/avatao-content/baseimage-tutorial-framework/wiki) in the background.
+This is just an additional abstraction layer, which (hopefully) makes it easier to create tutorials, but it's still using our same old **Tutorial Framework** in the background.
 
 However, we have separated the framework and your code as much as possible. The still need some access to eachother, so this is how we solved it...
 
@@ -161,8 +161,6 @@ with open('/tmp/tfw_send', 'w') as f:
     import json
     f.write(json.dumps({'key': 'fsm.trigger', 'transition': 'step_2'}) + '\n')
 ```
-
-[Wiki](https://github.com/avatao-content/baseimage-tutorial-framework/wiki) for the list of available messages.
 
 ##### Processes #####
 
