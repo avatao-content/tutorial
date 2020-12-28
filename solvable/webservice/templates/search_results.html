@@ -1,0 +1,25 @@
+{% extends "header.html" %}
+
+{% set active_page = "search-history" %}
+
+{% block body %}
+    <div class="main-container">
+        <div class="search-container">
+            <div class="secflix-h2">Searches</div>
+            {% if empty == False %}
+                <div class="result-columns">
+                    <div>Username</div>
+                    <div>Searched movie</div>
+                </div>
+                {% for line in history %}
+                <div class="movie">
+                    <div>{{ line[0] }}</div>
+                    <div>{{ line[1] }}</div>
+                </div>
+                {% endfor %}
+            {% else %}
+                <div> {{ history[0] }} </div>
+            {% endif %}
+        </div>
+    </div>
+{% endblock %}

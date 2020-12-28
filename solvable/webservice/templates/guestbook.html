@@ -1,0 +1,74 @@
+{% extends "header.html" %}
+
+{% set active_page = "guestbook" %}
+
+{% block body %}
+
+<div class="main-container">
+    <div class="row">
+        <div class="col">
+            <div class="form-container">
+
+                {%if session.logged_in %}
+                <form class="form-signin" method="post" action="/webservice/add_comment" enctype="multipart/form-data">
+                    <h2 class="secflix-h2">Guestbook</h2>
+                    <div class="secflix-h3">Sign the Guest Book</div>
+
+                    <div class="form-group">
+                        <label for="inputName" class="secflix-label">Name</label>
+                        <input type="text" id="inputName" name="name" class="form-control" value="{{ session.nickname }}" required readonly>
+                    </div>
+                    <div class="form-group">
+                        <label for="comment" class="secflix-label">Comment</label>
+                        <textarea class="form-control" name="comment" rows="5" id="comment"  required autofocus></textarea>
+                    </div>
+                    <div class="form-group" id="upload-file">
+                        <label for="file" class="btn btn-default btn-file btn-nopad">
+                            <input type="file" name="file" class="form-control" accept="image/*">
+                        </label>
+                    </div>
+                    <button class="btn btn-md btn-red" type="submit">Sign</button>
+
+                </form>
+
+                {% else %}
+                <h2 class="secflix-h2"> Only users can write into the guestbook! </h2>
+                {% endif %}
+
+                {% if "SUCCESS" in msg %}
+                <div class="alert alert-success" role="alert">File uploaded successfully!</div>
+                {% endif %}
+                {% if "Error:" in msg %}
+                <div class="alert alert-danger" role="alert">{{ msg }}</div>
+                {% endif %}
+
+            </div>
+        </div>
+        {%if session.logged_in %}
+            <div class="col">
+                <div class="comment-container">
+                    <div class="secflix-h3 padding-top">Comments</div>
+
+                    {% for comment in comments %}
+                    <div class="comment">
+                        <div calss="well">
+                            <div class="comment-name"> <b> {{ comment[0] }}  wrote: </b> </div>
+                        </div>
+                        <div class="well">
+                            {{ comment[1] }}
+                        </div>
+                        {% if comment[2] != None %}
+                        {% if comment[2] != "" %}
+                        <div class="label" id="uploaded-file">
+                            Attachment: <a class="navbar-brand" href="/webservice/show-upload/{{comment[2]}}">{{ comment[2] }}</a>
+                        </div>
+                        {% endif %}
+                        {% endif %}
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

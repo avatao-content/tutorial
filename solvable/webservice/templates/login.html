@@ -1,0 +1,27 @@
+{% extends "header.html" %}
+
+{% set active_page = "login" %}
+
+{% block body %}
+
+<div class="main-container">
+    <div class="form-container">
+        <form class="form-signin" method="post" action="/webservice/login" enctype="multipart/form-data">
+            <h2 class="secflix-h2">Login</h2>
+            <div class="form-group">
+                <label for="inputName" class="secflix-label">Username</label>
+                <input type="text" name="username" class="form-control" required autofocus>
+                <label for="inputName" class="secflix-label">Password</label>
+                <input type="password" name="password" class="form-control" required autofocus>
+                <button class="btn btn-md btn-red" type="submit" value="Upload">Log in</button>
+            </div>
+            <br>
+            <div id="message" class="alert-red">
+                {% if alert != None %}
+                {{ alert }}
+                {% endif %}
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}

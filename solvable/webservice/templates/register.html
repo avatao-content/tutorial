@@ -1,0 +1,29 @@
+{% extends "header.html" %}
+
+{% set active_page = "register" %}
+
+{% block body %} 
+
+<div class="main-container">
+    <div class="form-container">
+            <form class="form-signin" method="post" action="/webservice/register" enctype="multipart/form-data">
+            <h2 class="secflix-h2">Register</h2>
+            <div class="form-group">
+                <label for="inputName" class="secflix-label">Username</label>
+                <input type="text" name="username" class="form-control" placeholder="Username" autofocus>
+
+                <label for="inputName" class="secflix-label">Password</label>
+                <input type="text" name="password" class="form-control" placeholder="Password" autofocus>
+
+                <label for="inputName" class="secflix-label">Confirm password</label>
+                <input type="text" name="passwordconfirm" class="form-control" placeholder="Password" autofocus>
+                
+                <button class="btn btn-md btn-red" type="submit" value="Upload">Sign up</button>
+            </div>
+        </form>
+        <br>
+        <div id="message" class="alert-red">
+            {{ alert }}
+        </div>
+    </div>
+    {% endblock %}

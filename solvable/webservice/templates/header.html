@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>SecFlix</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="/webservice/static/bootstrap-4.1.1/css/bootstrap.min.css" rel="stylesheet" >
+        <link href="/webservice/static/style.css" rel="stylesheet">
+    </head>
+
+    <header>
+        <ul class="menu-bar" role="navigation">
+            <!-- Menu item list - id, href, name - -->
+            {% if session.logged_in %}
+                {% set navigation_bar = [
+                    ('index', '/webservice/index', 'Index'),
+                    ('guestbook', '/webservice/guestbook', 'Guestbook'),
+                    ('search', '/webservice/search', 'Search'),
+                    ('search_history', '/webservice/search-history', 'History'),
+                    ('profile', '/webservice/profile', 'Me')
+                ] -%}
+
+                {% if session.is_admin %}
+                    {% set dropdown_menu = [
+                        ('admin', '/webservice/admin', 'Admin panel'),
+                        ('settings', '/webservice/settings', 'Settings'),
+                        ('logout', '/webservice/logout', 'Logout')
+                    ] -%}
+                {% else %}
+                    {% set dropdown_menu = [
+                        ('settings', '/webservice/settings', 'Settings'),
+                        ('logout', '/webservice/logout', 'Logout')
+                    ] -%}
+                {% endif %}
+
+            {% else %}
+                {% set navigation_bar = [
+                    ('index', '/webservice/index', 'Index'),
+                    ('guestbook', '/webservice/guestbook', 'Guestbook'),
+                    ('login', '/webservice/login', 'Login'),
+                    ('register', '/webservice/register', 'Register')
+                ] -%}
+            {% endif %}
+
+            {% set active_page = active_page|default('index') -%}
+
+            {% if session.logged_in %}
+                <div class="logo-left">
+                    <img id="brand-image" alt="Website Logo" src="/webservice/static/images/secflix_logo.svg" />
+                </div>
+                <div class="right-menu">
+                    {% for id, href, caption in navigation_bar[:-1] %}
+                        <li {% if id == active_page %} id="current-link" {% else %} id="menu" {% endif%} >
+                            <a href="{{ href }}"> {{ caption|e }} </a>
+                        </li>
+                    {% endfor %}
+  
+                    {% set id = navigation_bar[-1][0] %}
+                    {% set href = navigation_bar[-1][1] %}
+                    {% set caption = navigation_bar[-1][2] %}
+                    <li {% if id == active_page %} id="current-link" {% else %} id="menu" {% endif%} >
+                        <a href="{{ href }}"> {{ caption|e }} </a>
+                    </li>
+                    <div class="dropdown">
+                        <img id="menu-image" src="/webservice/static/images/profile-picture.png"/>
+                        <div class="dropdown-content">
+                            {% for href, id, caption in dropdown_menu %}
+                                <li {% if id == active_page %} id="current-link" {% else %} id="menu" {% endif%} >
+                                    <a href="{{ href }}"> {{ caption|e }} </a>
+                                </li>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+
+            {% else %}
+                <div class="logo-left">
+                    <img id="brand-image" alt="Website Logo" src="/webservice/static/images/secflix_logo.svg"/>
+                </div>
+                <div class="right-menu">
+                {% for href, id, caption in navigation_bar %}
+                    <li {% if id == active_page %} id="current-link" {% else %} id="menu" {% endif%} >
+                        <a href="{{ href }}"> {{ caption|e }} </a>
+                    </li>
+                {% endfor %}
+            {% endif %}
+        </ul>
+    </header>
+
+    <body id = "{{ active_page }}">
+        {% block body %}
+        {% endblock %}
+    </body>
+</html>

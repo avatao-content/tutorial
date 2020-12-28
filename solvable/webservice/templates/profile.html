@@ -1,0 +1,16 @@
+{% extends "header.html" %}
+
+{% set active_page = "profile" %}
+
+{% block body %}
+
+<div class="main-container">
+    <div class="form-container">
+    	<div class="secflix-h2">Profile</div>
+        <div class="profile-header">Username: <span class="profile-text">{{ username }} </span></div>
+		<div class="profile-header">Nickname: <span class="profile-text">{{ nickname }} </span></div>
+		<br>
+        <a href="/webservice/settings" class="btn btn-md btn-red btn-settings btn-a"> Settings </a>
+    </div>
+</div>
+{% endblock %}

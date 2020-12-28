@@ -1,0 +1,1059 @@
+/*
+Background settings for each page
+*/
+
+body#index {
+    background-color: black;
+}
+
+body#guestbook {
+    background-color: black;
+}
+
+body#fourhundred {
+    background-color: black;
+}
+
+body#fivehundred {
+    background-color: black;
+}
+
+body#login {
+    background-color: black;
+}
+
+body#register {
+    background-color: black;
+}
+
+body#search {
+    background-color: black;
+}
+
+body#profile {
+    background-color: black;
+}
+
+body#settings {
+    background-color: black;
+}
+
+body#file {
+    background-color: black;
+}
+
+body#search-history {
+    background-color: black;
+}
+
+body#admin {
+    background-color: black;
+}
+
+.btn-settings{
+    width: 47%;
+}
+
+.suggested-users{
+    font-size: 1em !important;
+    padding-top: .5em;
+}
+
+/*
+Error messages
+*/
+.error {
+    color: #ED1C24;
+    font-size: 6vh;
+    text-align: left;
+    width: 30%;
+    height: auto;
+    margin-top: 18%;
+    margin-left: 16%;
+}
+
+input {
+    text-align: left;
+    border-radius: 10px;
+    width: 100%;
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 10px;
+    max-width: 500px;
+}
+
+.alert {
+    padding: .75rem 1.25rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    margin-top: 2em;
+    width: 100%;
+    max-width: 500px;
+}
+
+.sf-alert{
+    padding: .75rem 1.25rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    margin-top: 2em;
+    width: 100%;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+/*
+General body
+*/
+body {
+    background-repeat: no-repeat;
+    background-size: 100vw auto;
+    background-position: top;
+    background-color: #000000;
+    background-attachment: scroll;
+}
+
+a {
+    /*font-size: 2.3vh;*/
+    color: white;
+}
+
+a:hover {
+    color: #f5f5f5;
+}
+
+img {
+    height: 10vh;
+    padding-right: 3vh;
+}
+
+.main-container-with-bg {
+    background-image: url(images/secflix_bg_image.png);
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-position-y: bottom;
+    background-size: 40%;
+    margin-left: 8em;
+    padding-top: 4em;
+    padding-bottom: 4em;
+
+}
+
+.main-container {
+    min-height: 100vh;
+    text-align: center;
+    font-family: "Open Sans", sans-serif;
+}
+
+.url-bar-container {
+   display: flex;
+   justify-content: flex-start;
+   align-items: center;
+   flex-wrap: nowrap;
+   width: 95%;
+   height: 3vh;
+   margin-top: 0.2%;
+   margin-left: auto;
+   margin-right: auto;
+   padding: 0px;
+   background-color: #FFFFFF;
+}
+
+.url-button {
+   background-color: #FFFFFF;
+   padding: 0px;
+   margin: 0px;
+   border: 0px;
+   width: 3%;
+}
+
+.url-button img {
+   height: 2vh;
+   padding: 0px;
+   margin: 0px;
+}
+
+.url-bar-input {
+   width: 90%;
+   height: 2.5vh;
+   font-size: 1.5vh;
+   padding: 0.5%;
+   margin: 0px;
+}
+
+/*
+Some additional stuff
+*/
+#brand-image {
+    height: 5em;
+}
+
+.index-image {
+    height: 23vw;
+    padding-right: 2vw;
+}
+
+.form-control {
+    padding: .5em;
+    border-radius: 0.3em;
+    margin-bottom: 1em;
+}
+
+#current-link a {
+    color: #ED1C24;
+}
+
+.btn{
+    max-width: 500px;
+    width: 100%;
+}
+
+.btn-nopad{
+    padding: 0px;
+}
+
+.btn-a{
+    width: 47% !important;
+}
+
+select {
+    width: 100%;
+    border-radius: 10px;
+    padding-top: .5em;
+    padding-bottom: .5em;
+    padding-left: .5em;
+    max-width: 500px;
+}
+
+.form-group {
+    margin-bottom: 1vw;
+    width: 100%;
+    max-width: 500px;
+}
+
+.profile-header {
+    text-align: left;
+    font-weight: bold;
+    color: white;
+}
+
+.error-message {
+    color: #ED1C24;
+    text-align: left;
+}
+
+.comment-header {
+    text-align: left;
+    font-size: 1.3em;
+    margin-bottom: 1em;
+    color: black;
+    font-weight: bold;
+}
+
+.secflix-h3 {
+    text-align: left;
+    font-size: 1.3em;
+    margin-bottom: 1em;
+    color: white;
+    font-weight: bold;
+}
+
+.secflix-h2 {
+    font-size: 2em;
+    text-align: left;
+    padding-bottom: 1em;
+    color: white;
+    font-weight: bold;
+}
+
+.btn-red{
+    background: #ED1C24;
+    border-radius: 0.3em;
+    font-weight: bold;
+    color:white;
+}
+
+
+.secflix-label {
+    color: white;
+    text-align: left;
+    float: left;
+    width: 100%;
+}
+
+/*
+Navbar settings
+Same for each page
+*/
+.menu-bar {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding-left: 0px;
+
+}
+
+.menu-bar li {
+    margin-right: 5%;
+    font-weight: bold;
+    color: black;
+    padding-left: 20px;
+}
+
+.dropdown-content .icon{
+  display: none;
+}
+
+/*
+Left menu
+*/
+.logo-left{
+    float:left;
+}
+
+.left-menu {
+    display: flex;
+}
+
+/*
+Right menu
+*/
+.right-menu {
+    width: 55%;
+    display: flex;
+    list-style: none;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+/*
+Dropdown menu
+*/
+.dropdown {
+    border: none;
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    margin-right: 3%;
+    display: none;
+    position: absolute;
+    background-color: #1F2122;
+    right: 25%;
+    z-index: 1;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    justify-content: center;
+    flex-direction: column;
+    padding: 16px;
+    border-radius: 0.3em;
+    text-align: center;
+
+}
+
+.dropdown-content a {
+    color: #46B4B1;
+}
+
+.dropdown-content li {
+    float: left;
+    position: relative;
+}
+
+.dropdown:hover .dropdown-content{
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+}
+
+/*
+Index.html text settings
+*/
+
+.header-text {
+    color: white;
+    font-size: 3vw;
+    text-align: left;
+    word-wrap: normal;
+    margin-top: 8.5%;
+    padding-bottom: 3vw;
+    font-weight: bold;
+}
+
+.index-text {
+    color: white;
+    font-size: 3.2em;
+    text-align: left;
+    word-wrap: normal;
+    width: 55%;
+}
+
+.welcome-text {
+    color: white;
+    font-size: 1.5em;
+    text-align: left;
+    width: 55%;
+}
+
+.shows-text {
+    color: #ed1c24;
+    font-size: 4vw;
+    margin-bottom: 0.5%;
+    text-align: left;
+    padding-left: 10vw;
+}
+
+/*
+Index.html flexbox settings
+*/
+
+.flex-shows {
+    margin-bottom: 3%;
+    display: flex;
+    justify-content: center;
+    margin-left: 18px;
+}
+
+.flex-shows a {
+    width: 28%;
+    height: auto;
+    padding: 1%;
+}
+
+/*
+Guestbook settings
+*/
+
+.comment-header {
+    font-size: 3vh;
+    margin-bottom: 4%;
+    color: grey;
+    padding-top: 50px;
+}
+
+.form-container {
+    align-self: flex-start;
+    color: #2B5273;
+    text-align: left;
+    margin-left: 8em;
+    padding-top: 4em;
+    width: 65%;
+}
+
+.comment-name {
+    text-align: left;
+    font-size: 1.1em;
+}
+
+.comment-container {
+    width: 90%;
+    align-self: flex-start;
+    text-align: left;
+    margin-top: 3em;
+    color: #2B5273;
+    max-width: 500px;
+}
+
+.comment {
+    word-wrap: break-word;
+    margin-bottom:1vw;
+    padding: .8em;
+    color: #000000;
+    border-radius: 0.3em;
+    background-color: #f1f1f1;
+}
+
+#upload-file {
+    text-align: left;
+    align-items: flex-start;
+    align-content: flex-start;
+}
+
+.secondary-link{
+    color: grey;
+}
+
+.secondary-link:hover{
+    color: #3f3f3f;;
+}
+
+/*
+login,register
+*/
+
+.user-form-container {
+    justify-content: center;
+    color: #ED1C24;
+    width: 30%;
+    box-sizing: border-box;
+    margin-left: 8em;
+    padding-top: 8em;
+}
+
+.btn-blue {
+    background-color: #2c50ff;
+}
+
+/*
+profile
+*/
+.profile-background {
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.my-movies {
+    display: inline-block;
+    flex-wrap: wrap;
+    width: 100%;
+    color: #ED1C24;
+    justify-content: center;
+    flex-flow: column;
+    max-width: 500px;
+
+}
+
+
+.watchlist-menu { 
+    /*display: flex;*/
+    flex-wrap: nowrap;
+    flex-flow: row;
+    white-space: nowrap;
+    padding-bottom: 3%;
+}
+
+
+#watchlist-form {
+    display: inline-grid;
+    width: 100%;
+}
+
+#view-as {
+    display: inline-grid;
+    max-width: 500px;
+    width: 100%;
+}
+
+.profile-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    flex-flow: column;
+    word-wrap: normal;
+    word-break: normal;
+    color: white;
+    width: 100%;
+    margin-right: 4%;
+}
+
+.profile-text {
+    text-align: left;
+    color: #ED1C24;
+    padding-bottom: 5px;
+}
+
+/*
+Settings
+*/
+
+.settings-form-item {
+    display: grid;
+    width: 100%;
+}
+
+.settings-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    flex-flow: column;
+    width: 30%;
+    align-self: flex-start;
+    margin-left: 17%;
+    margin-top: 5%;
+    color: #ED1C24;
+    font-size: 2vw;
+}
+
+.form-heading {
+    margin-top: 5%;
+    align-items: flex-start;
+    text-align: left;
+    font-size: 2vw;
+}
+
+.successbox {
+    font-size: 2vh;
+    align-self: center;
+}
+
+.btn-change {
+    margin-top: 3%;
+    font-size: 2.5vw;
+    height: auto;
+    padding: 1%;
+}
+
+/*
+file
+*/
+.file-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.file-container {
+    display: block;
+    align-content: center;
+    margin-top: 5%;
+    max-width: 90%;
+    align-items: center;
+}
+
+.file-container img{
+    display: inline-block;
+    max-width: 100%;
+}
+
+/*
+Search
+*/
+
+.search-container {
+    align-self: flex-start;
+    justify-content: center;
+    color: #ED1C24;
+    box-sizing: border-box;
+    padding-top: 8em;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.movie {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.5vw;
+}
+
+.result-columns {
+    color: white;
+    display: flex;
+    justify-content:space-between;
+    font-weight: bold;
+    font-size:1.5em;
+}
+
+
+#menu a {
+    color: white;
+    font-size: 1.2em;
+}
+
+#current-link a {
+    color: #ed1c24;
+    font-size: 1.2em;
+}
+
+#menu-image {
+    height: 3em;
+}
+
+.comment-header {
+    text-align: center;
+    font-size: 1.3vw;
+    margin-bottom: 4%;
+}
+
+.comment-name {
+    text-align: left;
+    font-size: 1.1em;
+}
+
+
+/* Media queries for each TFW layout 0*/
+@media screen and (max-width: 499px){
+    .profile-container {
+        display: contents;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        flex-flow: column;
+        word-wrap: normal;
+        word-break: normal;
+        color: white;
+        width: 100%;
+    }
+
+    .settings-form-item {
+        display: contents;
+        width: 100%;
+    }
+
+    .watchlist-menu{
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .right-menu {
+        display: inline-table;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .form-group {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .error-message {
+        text-align: center;
+    }
+
+
+    .profile-header{
+        text-align: center;
+    }
+
+    .profile-text{
+        text-align: center;
+    }
+
+    .form-container {
+        align-self: flex-start;
+        color: #2B5273;
+        text-align: center;
+        padding-top: 1em;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .secflix-label{
+        text-align: center;
+    }
+
+    .alert {
+        margin-top: 4em;
+        margin-left: auto;
+        margin-right: auto
+    }
+
+    .user-form-container{
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        width: 95%;
+        padding-top: 1em;
+    }
+
+    .btn {
+        float: none;
+    }
+
+    .movie {
+        font-size: 1.1em;
+    }
+
+    .welcome-text{
+        text-align: center;
+        width: 95%;
+    }
+    
+    .main-container-with-bg{
+        padding-top: 1em;
+        padding-bottom: 1em;
+        margin-left: 1em;
+        background: none;
+    }
+
+    .shows-text{
+        text-align: center;
+        font-size: 1.8em;
+        padding-left: 0px;
+    }
+
+    .index-text{
+        width:100%;
+        text-align: center;
+
+    }
+
+    .search-container{
+        margin-left: 5%;
+        margin-right: 5%;
+        width: 90%;
+        padding-top: 1em;
+    }
+
+    .result-columns{
+        font-size: 1.1em;
+        padding-top: 60px;
+    }
+
+    .secflix-h3{
+        text-align: center;
+    }
+
+    .secflix-h2{
+        text-align: center;
+    }
+
+    .dropdown{
+        display: list-item;
+    }
+
+    .dropdown-content{
+        margin-right: 0px;
+    }
+
+    .dropdown-content li {
+        float: none;
+        position: static;
+    }
+
+    .logo-left {
+        display: none;
+    }
+
+    img {
+        padding-right: 0px;
+    }
+
+    .menu-bar {
+        border-bottom: 2px solid red;
+    }
+
+    .menu-bar li {
+        text-align: center;
+        padding-left: 1%;
+    }
+
+    #menu a {
+        color: white;
+    }
+
+    #current-link a {
+        color: #ed1c24;
+    }
+
+    #menu-image {
+        display: block;
+        height: 3em;
+        margin-left: auto;
+        margin-right: auto
+    }
+
+    .comment-header {
+        text-align: center;
+        font-size: 1.3vw;
+        margin-bottom: 4%;
+    }
+
+    .comment-name {
+        text-align: left;
+        font-size: 1em;
+    }
+
+    .comment-container{
+        margin-top: 3em;
+        min-height: 15em;
+        margin-left: auto;
+        margin-right: auto
+    }
+}
+
+/* Terminal-Web-Ide 1 */
+@media only screen and (max-width: 799px) and (min-width: 500px) {
+    .profile-container {
+        display: contents;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        flex-flow: column;
+        word-wrap: normal;
+        word-break: normal;
+        color: white;
+        width: 100%;
+    }
+
+    .settings-form-item {
+        display: contents;
+        width: 100%;
+    }
+
+    .watchlist-menu{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .form-group {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .error-message {
+        text-align: center;
+    }
+
+
+    .profile-header{
+        text-align: center;
+    }
+
+    .profile-text{
+        text-align: center;
+    }
+
+    .form-container {
+        align-self: flex-start;
+        color: #2B5273;
+        text-align: center;
+        padding-top: 1em;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .secflix-label{
+        text-align: center;
+    }
+
+    .alert {
+        margin-top: 4em;
+        margin-left: auto;
+        margin-right: auto
+    }
+
+    .user-form-container{
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        width: 95%;
+        padding-top: 1em;
+    }
+
+    .btn {
+        float: none;
+    }
+
+    .movie {
+        font-size: 1.1em;
+    }
+
+    .welcome-text{
+        text-align: center;
+        width: 95%;
+    }
+    
+    .main-container-with-bg{
+        padding-top: 1em;
+        padding-bottom: 1em;
+        margin-left: 1em;
+        background: none;
+    }
+
+    .shows-text{
+        text-align: center;
+        font-size: 1.8em;
+        padding-left: 0px;
+    }
+
+    .index-text{
+        width:100%;
+        text-align: center;
+
+    }
+
+    .search-container{
+        margin-left: 5%;
+        margin-right: 5%;
+        width: 90%;
+        padding-top: 1em;
+    }
+
+    .result-columns{
+        font-size: 1.1em;
+        padding-top: 60px;
+    }
+
+    .secflix-h3{
+        text-align: center;
+    }
+
+    .secflix-h2{
+        text-align: center;
+    }
+
+    .dropdown{
+        display: list-item;
+    }
+
+    .dropdown-content{
+        margin-right: 0px;
+    }
+
+    .dropdown-content li {
+        float: none;
+        position: static;
+    }
+
+    .logo-left {
+        display: none;
+    }
+
+    .right-menu {
+     display: contents;
+     justify-content: space-evenly;
+ }
+
+ img {
+    padding-right: 0px;
+}
+
+.alert-red{
+    color: red;
+}
+
+.menu-bar {
+    border-bottom: 2px solid red;
+}
+
+.menu-bar li {
+    text-align: center;
+    padding-left: 1%;
+}
+
+#menu a {
+    color: white;
+}
+
+#current-link a {
+    color: #ed1c24;
+}
+
+#menu-image {
+    display: block;
+    height: 3em;
+    margin-left: auto;
+    margin-right: auto
+}
+
+.comment-header {
+    text-align: center;
+    font-size: 1.3vw;
+    margin-bottom: 4%;
+}
+
+.comment-name {
+    text-align: left;
+    font-size: 1em;
+}
+
+.comment-container{
+    margin-top: 3em;
+    min-height: 15em;
+    margin-left: auto;
+    margin-right: auto
+}
+
+}

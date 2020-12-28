@@ -1,0 +1,27 @@
+{% extends "header.html" %}
+
+{% set active_page = "search" %}
+
+{% block body %}
+
+    <div class="main-container">
+        <div class="search-container">
+            <div class="secflix-h2">Movies</div>
+            <form class="form-signin" method="post" action="/webservice/search" enctype="multipart/form-data">
+                <div class="form-group w40">
+                    <label for="inputName" class="secflix-label">Movie name</label>
+                    <input type="text" name="moviename" class="form-control" required autofocus>
+                    <button class="btn btn-md btn-red" type="submit" value="Upload">Search</button>
+                </div>
+            </form>
+            {% if no_result == False %}
+                <div class="result-columns"> <div>IMDB</div>    <div>Name</div> </div>
+                {% for result in results %}
+                    <div class="movie"> <div>{{ result[0] }}</div>   <div>{{ result[1] }}</div> </div>
+                {% endfor %}
+            {% elif no_result == True %}
+                <div class="error-message"> {{ results[0] }} </div>
+            {% endif %}
+        </div>
+    </div>
+{% endblock %}
