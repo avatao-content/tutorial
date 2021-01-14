@@ -35,9 +35,9 @@ Please keep the whole `VOLUME ["/home/user"]` line in your Dockerfile. We could 
 
 ##### Frontend config and APP FSM #####
 
-The Tutorial Framework needs a frontend config, an `app_fsm.py` (states and messages) and some initial values for the components (WebIDE, Terminal). Now everything is compressed in a single [app.yml](tree/master/solvable/tutorial/app.yml) file and a [script in the baseimage](https://github.com/avatao-content/baseimage-tutorial/blob/master/tutorial/create_app_from_yml.py) generates the legacy files (`app_fsm.py` and `frontend_config.yaml`) for the framework in the same directory (`/home/user/tutorial/*`).
+The Tutorial Framework needs a frontend config, an `app_fsm.py` (states and messages) and some initial values for the components (WebIDE, Terminal). Now everything is compressed in a single [tfw.yml](tree/master/solvable/tutorial/tfw.yml) file and a [script in the baseimage](https://github.com/avatao-content/baseimage-tutorial/blob/master/tutorial/create_app_from_yml.py) generates the legacy files (`app_fsm.py` and `frontend_config.yaml`) for the framework in the same directory (`/home/user/tutorial/*`).
 
-In the first part of the [app.yml](tree/master/solvable/tutorial/app.yml) you have to deal with the frontend config and initial values of built-in eventhandlers:
+In the first part of the [tfw.yml](tree/master/solvable/tutorial/tfw.yml) you have to deal with the frontend config and initial values of built-in eventhandlers:
 ```yml
 dashboard:
   # The tutorial will step into the first state when it's opened
@@ -116,7 +116,7 @@ Tutorials only have few Framework related events (which can be useful for a deve
 
 The basic TFW is really flexible and it allows us to create arbitrary event handler classes by subscribing to any combination of ZMQ message keys, however you have to be familiar with the inner workings of the Framework to use these features effectively. Also, you probably won't have complex use-cases, so we have designed an [SDK](https://github.com/avatao-content/tfwsdk-python) which helps you with the event handlers.
 
-[app.py](tree/master/solvable/tutorial/app.py):
+[eventhandlers.py](tree/master/solvable/tutorial/eventhandlers.py):
 ```python
 from tfwsdk import sdk
 
@@ -146,7 +146,7 @@ You can install the SDK to your local environment as well (and I really suggest 
 pip3 install git+https://github.com/avatao-content/tfwsdk-python.git
 ```
 
-The `app.py` is started with supervisor in the container and listens to TFW messages (with ZMQ). On events it [imports your functions](https://github.com/avatao-content/tfwsdk-python/blob/master/tfwsdk/sdk.py#L19) and executes them.
+The `eventhandlers.py` is started with supervisor in the container and listens to TFW messages (with ZMQ). On events it [imports your functions](https://github.com/avatao-content/tfwsdk-python/blob/master/tfwsdk/sdk.py#L19) and executes them.
 
 ##### Events in applications #####
 

@@ -23,7 +23,8 @@ terminal:
   terminalMenuItem: terminal # terminal / console
 ide:
   patterns: 
-   - /.tutorial/app.*
+   - /.tutorial/event*.py
+   - /.tutorial/tfw.yml
   showDeployButton: true
   deployButtonText:
     TODEPLOY:  Deploy
