@@ -1,4 +1,4 @@
-FROM avatao/tutorial:ragdoll-20210114
+FROM avatao/tutorial:ragdoll-20210217
 
 COPY solvable/supervisor /etc/supervisor
 COPY solvable/webservice /home/user/webservice
