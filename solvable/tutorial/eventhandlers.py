@@ -1,13 +1,13 @@
 from tfwsdk import sdk
 
-def on_step(curent_state: int):
-    sdk.message_send('CURRENT STATE: ' + str(curent_state))
+def on_step(current_state: int):
+    sdk.message_send('CURRENT STATE: ' + str(current_state))
 
-def on_deploy(curent_state: int):
+def on_deploy(current_state: int):
     sdk.message_send('DEPLOY BUTTON CLICKED')
     return True # if deploy was successful
 
-def on_message_button_click(curent_state: int, button_value: str):
+def on_message_button_click(current_state: int, button_value: str):
     sdk.message_send('MESSAGE BUTTON CLICKED: ' + button_value)
 
 def on_ide_write(current_state: int, name_of_file: str, content_of_file: str):
