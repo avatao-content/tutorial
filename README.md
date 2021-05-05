@@ -10,9 +10,9 @@ To use it you'll need:
 
 ```
 git clone https://github.com/avatao-content/challenge-toolbox
-git clone https://github.com/avatao-content/tutorial-example
-python3 challenge-toolbox/build.py tutorial-example
-python3 challenge-toolbox/start.py tutorial-example
+git clone https://github.com/avatao-content/tutorial
+python3 challenge-toolbox/build.py tutorial
+python3 challenge-toolbox/start.py tutorial
 ```
 
 On the first run it will download the required Docker baseimages, but later it will take only few seconds (depending on your computer and Dockerfile complexity) to build and start your tutorial.
