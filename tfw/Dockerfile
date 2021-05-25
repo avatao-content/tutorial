@@ -1,1 +1,1 @@
-FROM avatao/tfw:ragdoll-20210217
+FROM avatao/tfw:ragdoll-20210525
